@@ -1359,6 +1359,7 @@
 
 .zoomIn {
   animation-name: zoomIn;
+  animation-duration: 1s;
 }
 
 @keyframes zoomInDown {

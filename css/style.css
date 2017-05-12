@@ -14,8 +14,7 @@ span{
 	display: inline-block;
 }
 h1,
-h2,
-h4,
+h3,
 h5,
 h6 {
   margin: 0 0 35px;
@@ -23,10 +22,22 @@ h6 {
   font-weight: 700;
   letter-spacing: 1px;
 }
-h3{
+h2{
   text-transform: uppercase;
   font-weight: 700;
 	font-size: 30px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #444;
+}
+h3{
+	  text-transform: uppercase;
+
+	font-size: 28px;
+	color: #444;
+}
+h4{
+  font-weight: 700;
+	font-size: 24px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #444;
 }
@@ -38,7 +49,8 @@ p {
   margin: 0 0 25px;
   font-size: 16px;
   line-height: 1.5;
-  font-family: 'Open Sans', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
 }
 @media (min-width: 1200px) {
 .left{
@@ -50,8 +62,9 @@ p {
 }
 
 
-p .large{
-	font-size: 22px;
+.large{
+	font-size: 28px ;
+	font-weight: 300;
 }
 @media (min-width: 768px) {
   p {
@@ -61,7 +74,7 @@ p .large{
   }
 }
 a {
-  color: #42DCA3;
+  color: #c10f2d;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -69,8 +82,38 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #ef8698;
 }
+
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+ul li.point{
+	  margin-left: 3em;
+		margin-bottom: 10px;
+}
+
+
+ul li.point:before {
+  content: '\f058 ';
+  font-family: 'FontAwesome';
+  float: left;
+  color: #c10f2d;
+  font-size: 15px;
+    margin-left: -1.5em;
+}
+
+ul li.point p{
+	text-align: left;
+	margin: 2px;
+  font-size: 20px;
+  line-height: 1;
+}
+
 
 .fade-line{ 
 	z-index: -1;
@@ -79,14 +122,26 @@ a:focus {
     color:white;
     height:1px;
     background:black;
-    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#777), to(#eee));
+    background: -webkit-gradient(radial, 50% 50%, 0, 50% 50%, 350, from(#777), to(transparent));
 }
 .red-line{ 
 	z-index: -1;
     display:block;
     border:none;
     height:1px;
-    background: -webkit-gradient(radial, 40% 40%, 20, 100% 100%, 100, from(transparent), to(red));
+    background: -webkit-gradient(radial, 40% 40%, 20, 100% 100%, 100, from(transparent), to(#c10f2d));
+}
+
+.headshot{
+	padding: .5em;
+	margin-bottom: -100px;
+	border-radius: 50%;
+	background: rgba(255, 255, 255, .4);
+	box-shadow: .0em .5em .5em rgba(0, 0, 0, .4);
+	position: relative;
+	top: -150px;
+	width: 300px;
+
 }
 
 #split-R{
@@ -115,6 +170,37 @@ url("../img/experience-bg.jpg") no-repeat center fixed;
 background-size: cover; 
 }
 
+section#about{
+	font-size: 30px !important;
+	  height: 100%;
+}
+section#contact{
+	position: relative;
+	top: 100px;
+	width: 100%;
+	  background: #ddd;
+	  padding-bottom: 50px;
+	  padding-left: 100px;
+	  padding-right: 100px;
+}
+
+.contact-info-box {
+	text-align: left;
+	font-size: 30px;
+	line-height: 1.5;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 500;
+}
+
+
+.ft-larger{
+	font-family: 'Raleway', sans-serif;
+	font-size: 20px;
+}
+
+.red{
+	color: #c10f2d;
+}
 
 .fade-bg {
     background: -moz-linear-gradient(top, rgba(238, 238, 238, 1) 0%, rgba(238, 238, 238, 0) 50%, rgba(238, 238, 238, 0) 100%);
@@ -133,10 +219,18 @@ background-size: cover;
 	background: rgba(255, 255, 255, .8);
 	border-radius: 5px;
 }
+.gray-border{
+border-radius: 4px;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+border: 1px solid #ccc !important;
+top: 100px;
+}
 
 .light {
   font-weight: 400;
-}
+	font-size: 60px;
+  }
 .lighter {
 	line-height: 50px;
 	font-size: 70px;
@@ -170,25 +264,33 @@ font-family: 'Lora', serif;
   color: white;
 }
 .navbar-custom .nav li a {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
+	border-left: 1px solid transparent;
+	border-right: 1px solid transparent;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 .navbar-custom .nav li a:hover {
   color: rgba(255, 255, 255, 0.8);
   outline: none;
+  border-left: 1px solid #C72B46;
+  border-right: 1px solid #C72B46;
   background-color: transparent;
+  
 }
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:active {
   outline: none;
   background-color: transparent;
+  
 }
 .navbar-custom .nav li.active {
   outline: none;
 }
 .navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #C72B46;
+  
 }
 .navbar-custom .nav li.active a:hover {
   color: white;
@@ -205,8 +307,11 @@ font-family: 'Lora', serif;
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: rgba(0, 0, 0, .9);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+	-webkit-box-shadow: 0px 6px 21px 0px rgba(0,0,0,0.75);
+-moz-box-shadow: 0px 6px 21px 0px rgba(0,0,0,0.75);
+box-shadow: 0px 6px 21px 0px rgba(0,0,0,0.75);
   }
 }
 .intro {
@@ -317,11 +422,9 @@ font-family: 'Lora', serif;
 .mission-section {
   width: 100%;
   padding: 50px 0;
-  background: url(../img/moremountains.jpg) no-repeat center center scroll;
+  background: #ddd;
     background-attachment: fixed;
-  
-  background-color: black;
-  -webkit-background-size: cover;
+    -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
@@ -331,20 +434,28 @@ font-family: 'Lora', serif;
   height: 200px;
   margin-top: 100px;
 }
+
+
+
+
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 100px;
+    padding-top: 50px;
   }
   .mission-section {
-    padding: 100px 0;
+    padding: 50px 0;
   }
   #map {
     height: 400px;
     margin-top: 250px;
   }
 }
+
+footer{
+	background: #333;
+	color: #fff;
+}
 .btn {
-  text-transform: uppercase;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 400;
   -webkit-transition: all 0.3s ease-in-out;
@@ -353,16 +464,16 @@ font-family: 'Lora', serif;
   border-radius: 0;
 }
 .btn-default {
-  border: 1px solid #42DCA3;
-  color: #42DCA3;
+  border: 1px solid #C1102E;
+  color: #C1102E;
   background-color: transparent;
 }
 .btn-default:hover,
 .btn-default:focus {
-  border: 1px solid #42DCA3;
+  border: 1px solid #C1102E;
   outline: none;
-  color: black;
-  background-color: #42DCA3;
+  color: #eee;
+  background-color: #C1102E;
 }
 ul.banner-social-buttons {
   margin-top: 0;
@@ -383,6 +494,8 @@ ul.banner-social-buttons {
   }
 }
 footer {
+	position: relative;
+	top: 100px;
   padding: 50px 0;
 }
 footer p {
